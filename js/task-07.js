@@ -13,3 +13,15 @@ function onInputRange() {
 function setFontSize(size) {
   refs.text.style.fontSize = size + 'px';
 }
+
+// const refs = {
+//   input: document.querySelector('#font-size-control'),
+//   text: document.querySelector('#text'),
+// };
+// refs.text.style.fontSize = refs.input.value + 'px';
+
+// refs.input.addEventListener('input', onInputRange);
+
+// function onInputRange() {
+//   refs.text.style.fontSize = refs.input.value + 'px';
+// }
