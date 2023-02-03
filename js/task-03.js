@@ -15,12 +15,22 @@ const images = [
 
 const galleryListEl = document.querySelector('.gallery');
 
-const galleryItem = images
-  .map(
-    ({ url, alt }) => `<li class="gallery__item">
+const galleryItem = images.reduce(
+  (acc, { url, alt }) =>
+    acc +
+    `<li class="gallery__item">
       <img src="${url}" alt="${alt}" />
-    </li>`
-  )
-  .join('');
+    </li>`,
+  ''
+);
+
+//Через map i join
+// const galleryItem = images
+//   .map(
+//     ({ url, alt }) => `<li class="gallery__item">
+//       <img src="${url}" alt="${alt}" />
+//     </li>`
+//   )
+//   .join('');
 
 galleryListEl.insertAdjacentHTML('afterBegin', galleryItem);
