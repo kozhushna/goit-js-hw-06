@@ -6,6 +6,6 @@ const refs = {
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  const message = event.currentTarget.value;
+  const message = event.currentTarget.value.trim();
   refs.span.textContent = message === '' ? 'Anonymous' : message;
 }
